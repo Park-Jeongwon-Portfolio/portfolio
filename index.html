@@ -14,9 +14,9 @@
   --ink-faint:#9A9AA3;
   --line:#EAEAEC;
   --line-strong:#DADADE;
-  --accent:#1C3FA0;
-  --accent-tint:rgba(28,63,160,.07);
-  --accent-tint-2:rgba(28,63,160,.13);
+  --accent:#0E7C66;
+  --accent-tint:rgba(14,124,102,.08);
+  --accent-tint-2:rgba(14,124,102,.15);
   --maxw:1040px;
   --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
 }
@@ -93,7 +93,7 @@ h2.title{font-size:1.85rem;font-weight:800;letter-spacing:-.03em;margin-bottom:6
 .hero-photo{position:relative}
 .hero-photo .frame{
   border-radius:16px;overflow:hidden;border:1px solid var(--line-strong);
-  box-shadow:0 26px 50px -28px rgba(28,63,160,.4),0 6px 18px -12px rgba(0,0,0,.12);
+  box-shadow:0 26px 50px -28px rgba(14,124,102,.32),0 6px 18px -12px rgba(0,0,0,.12);
   background:#fff;
 }
 .hero-photo img{width:100%;display:block;aspect-ratio:660/881;object-fit:cover}
@@ -114,6 +114,10 @@ h2.title{font-size:1.85rem;font-weight:800;letter-spacing:-.03em;margin-bottom:6
 .tl .tl-org{font-size:.86rem;color:var(--ink-soft);margin-bottom:6px}
 .tl .tl-desc{font-size:.9rem;color:var(--ink-soft);line-height:1.65;max-width:78ch}
 .tl .tl-desc .tag{color:var(--accent);font-weight:600}
+.tl-points{list-style:none;margin-top:9px;display:flex;flex-direction:column;gap:6px;max-width:84ch}
+.tl-points li{position:relative;padding-left:15px;padding-bottom:0;font-size:.9rem;color:var(--ink-soft);line-height:1.62}
+.tl-points li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--accent);opacity:.55;border:none}
+.tl-points li .tag{color:var(--accent);font-weight:600}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 
 /* ---------- AWARDS ---------- */
@@ -258,7 +262,6 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
   <div class="nav-in">
     <a href="#home" class="brand">박정원<span class="en">Frontend Developer</span></a>
     <div class="nav-links">
-      <a href="#about">About</a>
       <a href="#education">학력</a>
       <a href="#training">교육</a>
       <a href="#activities">활동</a>
@@ -293,39 +296,55 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
     </div>
   </header>
 
-  <!-- ============ 01 ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="kicker reveal"><span class="idx">01</span><span class="en">About</span><span class="ln"></span></div>
-    <div class="about-body reveal">
-      <p>꾸준한 몰입과 실행력으로 실전 역량을 쌓아온 <span class="hl">프론트엔드 개발자</span>입니다. React 기반 웹 개발을 중심으로, <span class="hl">팀의 대화를 코드와 화면으로 옮기는</span> 사용자 중심 개발을 지향합니다.</p>
-      <p>캔버스 렌더링 엔진, 실시간 멀티 클라이언트 동기화, AI 결과가 화면까지 흐르는 데이터 파이프라인처럼 까다로운 문제를 끝까지 파고들어 <span class="hl">실제로 동작하는 결과</span>로 만들어냅니다.</p>
-    </div>
-  </section>
-
-  <!-- ============ 02 학력 ============ -->
+  <!-- ============ 01 학력 ============ -->
   <section class="section" id="education">
-    <div class="kicker reveal"><span class="idx">02</span><span class="en">Education</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">01</span><span class="en">Education</span><span class="ln"></span></div>
     <h2 class="title reveal">학력</h2>
     <ul class="tl reveal" style="margin-top:18px">
       <li><div class="tl-when">2020.03 – 2024.08</div><div class="tl-what">중앙대학교 영어영문학과</div><div class="tl-org">학사 졸업</div></li>
     </ul>
   </section>
 
-  <!-- ============ 03 교육 ============ -->
+  <!-- ============ 02 교육 ============ -->
   <section class="section" id="training">
-    <div class="kicker reveal"><span class="idx">03</span><span class="en">Training</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">02</span><span class="en">Training</span><span class="ln"></span></div>
     <h2 class="title reveal">교육 이수</h2>
     <ul class="tl reveal" style="margin-top:18px">
-      <li><div class="tl-when">2025.07 – 2026.06</div><div class="tl-what">삼성 청년 SW · AI 아카데미 (SSAFY) 14기</div><div class="tl-org">대한상공회의소</div><div class="tl-desc">알고리즘 <span class="tag">기초~심화</span>, 풀스택 웹(FE · BE · DB) 설계 및 Django 서버 구축, 반응형 프론트엔드, 생성형 AI API · 파인튜닝 · 경량화 기반 AI 시스템 설계 · 구현 역량 함양</div></li>
-      <li><div class="tl-when">2024.04 – 2024.08</div><div class="tl-what">반응형 UI/UX 웹디자인 &amp; 웹퍼블리셔 양성과정</div><div class="tl-org">그린컴퓨터아카데미</div><div class="tl-desc">사용자 경험 분석 기반 정보 · UI · 화면 설계, 다양한 해상도 대응 반응형 웹 제작(디자인 · 코딩) 역량 함양</div></li>
-      <li><div class="tl-when">2022.10 – 2022.11</div><div class="tl-what">데이터 사이언스 코칭스터디 2022 <span class="tag">(팀 리더)</span></div><div class="tl-org">네이버 부스트코스</div><div class="tl-desc">Pandas · NumPy 전처리, 공공데이터 시각화 · EDA, 통계 기반 의사결정 역량 함양</div></li>
-      <li><div class="tl-when">2022.07 – 2022.08</div><div class="tl-what">모두를 위한 파이썬 PY4E 코칭스터디 2022</div><div class="tl-org">네이버 부스트코스</div><div class="tl-desc">Python 기초 문법 · 자료구조 · 파일 입출력 기반 구조적 프로그래밍 역량 함양</div></li>
+      <li><div class="tl-when">2025.07 – 2026.06</div><div class="tl-what">[삼성] 청년 SW·AI 아카데미</div><div class="tl-org">대한상공회의소</div>
+        <ul class="tl-points">
+          <li>기본·응용·심화 단계 알고리즘 문제 분석 및 해결 능력 함양</li>
+          <li>FE·BE·DB 기반 웹 서비스 설계 및 Django 서버 구축부터 DB 설계까지 전 과정 구현</li>
+          <li>HTML/CSS·JavaScript·Vue.js로 해상도에 최적화된 프론트엔드 화면 디자인·구현</li>
+          <li>생성형 AI API와 파인튜닝·경량화 등 AI 기술을 학습해 AI 시스템 설계·프로젝트 접목</li>
+        </ul>
+      </li>
+      <li><div class="tl-when">2024.04 – 2024.08</div><div class="tl-what">(디지털디자인) 반응형 UI/UX 웹디자인 &amp; 웹퍼블리셔 웹콘텐츠 개발자 양성과정 24-3</div><div class="tl-org">그린컴퓨터아카데미</div>
+        <ul class="tl-points">
+          <li>사용자경험·니즈 분석 기반 정보·UI·화면 설계 능력 함양</li>
+          <li>서비스·콘텐츠를 사용 목적에 맞게 최적화하여 디자인·구현</li>
+          <li>다양한 해상도에 대응하는 반응형 웹 제작(디자인·코딩) 능력 함양</li>
+        </ul>
+      </li>
+      <li><div class="tl-when">2022.10 – 2022.11</div><div class="tl-what">&lt;데이터 사이언스 2022&gt; 코칭스터디 : 2022 <span class="tag">(팀 리더)</span></div><div class="tl-org">네이버 부스트코스</div>
+        <ul class="tl-points">
+          <li>Python·Pandas·NumPy 기반 데이터 분석 환경 구성 및 전처리·정제</li>
+          <li>공공데이터 지리 정보 시각화 및 탐색적 데이터 분석(EDA)</li>
+          <li>기술통계·가설 검정 등 통계 기반 의사결정 능력 함양</li>
+        </ul>
+      </li>
+      <li><div class="tl-when">2022.07 – 2022.08</div><div class="tl-what">모두를 위한 파이썬 &lt;PY4E 2022&gt; 코칭스터디 : 2022</div><div class="tl-org">네이버 부스트코스</div>
+        <ul class="tl-points">
+          <li>Python 기초 문법(변수·조건문·반복문 등) 및 핵심 자료구조 활용</li>
+          <li>함수 정의·모듈화를 통한 구조적 프로그래밍</li>
+          <li>파일 입출력 기반 데이터 처리 및 응용 프로그램 구현</li>
+        </ul>
+      </li>
     </ul>
   </section>
 
   <!-- ============ 04 대내외활동 ============ -->
   <section class="section" id="activities">
-    <div class="kicker reveal"><span class="idx">04</span><span class="en">Activities</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">03</span><span class="en">Activities</span><span class="ln"></span></div>
     <h2 class="title reveal">대내외 활동</h2>
     <ul class="tl reveal" style="margin-top:18px">
       <li><div class="tl-when">2025.08 – 2025.12</div><div class="tl-what">알고리즘 스터디 <span class="tag">(스터디장)</span></div><div class="tl-org">멀티캠퍼스</div><div class="tl-desc">매일 문제 풀이 · 코드 리뷰 진행, Notion으로 활동 정리. <span class="tag">3연속 우수 스터디 선정</span></div></li>
@@ -337,7 +356,7 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
 
   <!-- ============ 05 수상 및 자격증 ============ -->
   <section class="section" id="awards">
-    <div class="kicker reveal"><span class="idx">05</span><span class="en">Awards &amp; Certificates</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">04</span><span class="en">Awards &amp; Certificates</span><span class="ln"></span></div>
     <h2 class="title reveal">수상 및 자격증</h2>
     <div class="aw-grid reveal" style="margin-top:18px">
       <div>
@@ -353,8 +372,8 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
         <div class="aw-h">Certificates &amp; Language</div>
         <ul class="aw-list">
           <li class="aw-item"><span class="aw-rank cert">자격</span><div><div class="aw-name">정보처리기사</div><div class="aw-org">한국산업인력공단 · 2024.09</div></div></li>
-          <li class="aw-item"><span class="aw-rank cert">어학</span><div><div class="aw-name">TOEIC Speaking · Intermediate High (IH)</div><div class="aw-org">2026.03</div></div></li>
-          <li class="aw-item"><span class="aw-rank cert">어학</span><div><div class="aw-name">TOEIC 885</div><div class="aw-org">2025.05</div></div></li>
+          <li class="aw-item"><span class="aw-rank cert">어학</span><div><div class="aw-name">TOEIC Speaking · Intermediate High (IH)</div><div class="aw-org">한국토익위원회 · 2026.03</div></div></li>
+          <li class="aw-item"><span class="aw-rank cert">어학</span><div><div class="aw-name">TOEIC 885</div><div class="aw-org">한국토익위원회 · 2025.05</div></div></li>
         </ul>
       </div>
     </div>
@@ -362,7 +381,7 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
 
   <!-- ============ 06 스킬 ============ -->
   <section class="section" id="skills">
-    <div class="kicker reveal"><span class="idx">06</span><span class="en">Skills</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">05</span><span class="en">Skills</span><span class="ln"></span></div>
     <h2 class="title reveal">보유 기술</h2>
     <div class="skill-grid reveal" style="margin-top:18px">
       <div class="skill-group"><h3>Languages</h3><div class="skill-row"><span class="nm">Python</span><span class="bars"><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg"></span></span><span class="val">4/5</span></div><div class="skill-row"><span class="nm">JavaScript</span><span class="bars"><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg"></span></span><span class="val">4/5</span></div><div class="skill-row"><span class="nm">TypeScript</span><span class="bars"><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg"></span></span><span class="val">4/5</span></div></div>
@@ -375,7 +394,7 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
 
   <!-- ============ 07 프로젝트 ============ -->
   <section class="section" id="projects">
-    <div class="kicker reveal"><span class="idx">07</span><span class="en">Projects</span><span class="ln"></span></div>
+    <div class="kicker reveal"><span class="idx">06</span><span class="en">Projects</span><span class="ln"></span></div>
     <h2 class="title reveal">대표 프로젝트</h2>
 
     <!-- Project 1: 4647 -->
@@ -567,7 +586,7 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 56px;text
 const links=[...document.querySelectorAll('.nav-links a')];
 const map={};links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map[e.target.id];if(a)a.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
-['about','education','training','activities','awards','skills','projects'].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el);});
+['education','training','activities','awards','skills','projects'].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el);});
 const rio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.04});
 document.querySelectorAll('.reveal').forEach((el)=>rio.observe(el));
 window.addEventListener('load',()=>{document.querySelectorAll('.hero .reveal').forEach((el,i)=>{setTimeout(()=>el.classList.add('in'),120+i*140);});});
